@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <script src="libs/jquery-2.1.0.min.js"></script>
+        <script src="libs/d3.min.js"></script>
+        
+        <script> var NN = {}; </script>       
+            
+        <script src="js/display.js"></script>
+        <script src="js/test1.js"></script> 
+        
+    </head>
+  
+    <body>
+        <input type="file" id="openfile" name="file" accept="*" style="display:none"/>
+        <p>Load the Training Images and the Training Labels
+        <div>
+            <table>
+                <tr>
+                    <td><button id="btnLoadTrainingImages"    onclick="NN.OnLoadMNISTFile(this)">Load MNIST Training Images</button></td>
+                    <td id="trainImageStatus">Not Loaded</td>
+                </tr>
+                <tr>
+                    <td><button id="btnLoadTrainingLabels"  onclick="NN.OnLoadMNISTFile(this)">Load MNIST Training Labels</button></td>
+                    <td id="trainLabelStatus">Not Loaded</td>
+                </tr>
+            </table>
+        </div>
+        
+        <hr style="margin-top:50px">
+        
+        <button id="btnShowPrev" onclick="NN.displayPrevImg()">Prev</button>       
+        <button id="btnShowNext" onclick="NN.displayNextImg()">Next</button>
+            
+        <p>
+        <div id="imgDisplay" ></div>
+        
+        <p style="margin-top:50px"> Not Yet 
+        <div>
+            <button id="btnLoadTestData"        onclick="NN.OnLoadMNISTFile(this)">Load MNIST Test Data</button>
+            <button id="btnLoadTestLabels"      onclick="NN.OnLoadMNISTFile(this)">Load MNIST Test Labels</button>
+        </div>
+    </body>
+  
+  
+</html>
+
